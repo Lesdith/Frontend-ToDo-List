@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { getTodos, updateTodoData } from "../lib/api";
 
+
 function TodoList() {
   const [todos, setTodos] = useState([]);
 
@@ -70,7 +71,7 @@ function TodoList() {
 
   return (
     <>
-      <h1>What's the Plan for Today?</h1>
+      <h1>ToDo List!</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}
@@ -79,6 +80,14 @@ function TodoList() {
         updateTodo={updateTodo}
         showDescription={showDescription}
       />
+    
+      {/* Intentando crear botones para pasar a la siguiente pagina 
+       <div class="form-group">
+       <button type="submit" class="btn btn-primary btn-xs"> Back </button>       
+       <button type="submit" class="btn btn-primary btn-xs"> Next </button>       
+      </div> 
+     */}
+
     </>
   );
 }

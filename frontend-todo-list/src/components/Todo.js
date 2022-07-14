@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import TodoForm from "./TodoForm";
 import {
-  RiCloseCircleLine,
+  RiDeleteBin2Line,
   RiCheckboxCircleLine,
-  RiArrowDownCircleLine,
+  RiSearchEyeLine,
 } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 
@@ -48,13 +48,13 @@ const Todo = ({
         <div className="icons">
           <RiCheckboxCircleLine
             onClick={() => completeTodo(todo.id, todo.is_done)}
-            className="delete-icon"
+            className="complete-icon"
           />
-          <RiArrowDownCircleLine
+          <RiSearchEyeLine
             onClick={() => showDescription(todo.id)}
-            className="delete-icon"
+            className="show-icon"
           />
-          <RiCloseCircleLine
+          <RiDeleteBin2Line
             onClick={() => removeTodo(todo.id)}
             className="delete-icon"
           />

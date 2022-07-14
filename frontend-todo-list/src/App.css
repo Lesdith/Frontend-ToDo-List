@@ -8,12 +8,19 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(
+ background:  url("./image/blanco.webp");
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+background-position:center; 
+ /* linear-gradient(
     0deg,
     rgba(48, 16, 255, 1) 0%,
     rgba(100, 115, 255, 1) 100%
-  );
+  );*/
 }
+
 .todo-app {
   display: flex;
   flex-direction: column;
@@ -29,9 +36,17 @@ body {
 }
 
 h1 {
-  margin: 32px 0;
+  margin: 25px 40px 35px 10px;
   color: #fff;
-  font-size: 24px;
+  font-size: 40px;
+  font-family: seriously;
+  text-shadow: 05px 05px rgb(35, 165, 182);
+}
+
+h2 {
+  margin: 25px 40px 35px 10px;
+  color: #fff;
+  font-size: 12px;
 }
 
 .complete {
@@ -41,17 +56,18 @@ h1 {
 
 .todo-form {
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
+
 }
 
 .todo-input {
-  padding: 14px 32px 14px 16px;
+  padding: 10px 10px 10px 10px;
   border-radius: 4px;
-  border: 2px solid #5d0cff;
+  border: 2px solid #1bd115;
   outline: none;
   width: 70%;
   background: transparent;
-  color: #fff;
+  color: rgb(94, 160, 190);
 }
 
 .todo-description {
@@ -63,7 +79,9 @@ h1 {
 }
 
 .todo-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 1.10em;
+  font-style: italic;
 }
 
 .todo-button {
@@ -71,27 +89,27 @@ h1 {
   height: fit-content;
   width: fit-content;
   border: none;
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
   outline: none;
   margin: 0 2px;
-  padding: 16px 22px;
+  padding: 14px 22px;
   background: linear-gradient(
     90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
+    rgb(21, 202, 103) 0%,
+    rgb(21, 202, 103) 100%
   );
   color: #fff;
   text-transform: capitalize;
 }
 
 .todo-input.edit {
-  border: 2px solid #149fff;
+  border: 2px solid #29ca4c;
 }
 
 .todo-button.edit {
   background: linear-gradient(
-    90deg,
+    80deg,
     rgba(20, 159, 255, 1) 0%,
     rgba(17, 122, 255, 1) 100%
   );
@@ -107,14 +125,13 @@ h1 {
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
-  margin: 4px auto;
-  color: #fff;
+  margin: 3px auto;
+  color: rgb(5, 0, 0);
   background: linear-gradient(
     90deg,
-    rgba(255, 118, 20, 1) 0%,
-    rgba(255, 84, 17, 1) 100%
+    rgb(196, 114, 214) 0%,
+    rgb(219, 211, 217) 100%
   );
-
   padding: 16px;
   border-radius: 5px;
   width: 100%;
@@ -123,24 +140,24 @@ h1 {
 .todo-row:nth-child(4n + 1) {
   background: linear-gradient(
     90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
+    rgb(121, 79, 204) 0%,
+    rgb(221, 212, 226) 100%
   );
 }
 
 .todo-row:nth-child(4n + 2) {
   background: linear-gradient(
     90deg,
-    rgba(255, 12, 241, 1) 0%,
-    rgba(250, 0, 135, 1) 100%
+    rgb(137, 230, 157) 0%,
+    rgb(238, 227, 233) 100%
   );
 }
 
 .todo-row:nth-child(4n + 3) {
   background: linear-gradient(
     90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
+    rgb(68, 154, 216) 0%,
+    rgb(198, 203, 209) 100%
   );
 }
 
@@ -153,11 +170,23 @@ h1 {
 
 .delete-icon {
   margin-right: 5px;
-  color: #fff;
+  color: rgb(201, 23, 23);
 }
 
+
+.complete-icon {
+  margin-right: 5px;
+  color: rgba(34, 104, 61, 0.781);
+}
+
+.show-icon {
+  margin-right: 5px;
+  color: rgb(23, 90, 216);
+}
+
+
 .edit-icon {
-  color: #fff;
+  color: rgba(228, 138, 20, 0.938);
 }
 
 .done {
@@ -171,4 +200,8 @@ h1 {
 
 .description {
   display: flex;
+}
+
+.col-sm{
+  color: rgb(228, 227, 227);
 }
